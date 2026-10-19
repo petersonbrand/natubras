@@ -1,10 +1,10 @@
 # Natubras — site institucional
 
-Prévia local em Next.js 16, React 19, TypeScript e Tailwind CSS 4. O projeto foi criado com a CLI oficial `create-next-app`, com exportação estática. Os originais de fotografia ficam em `../docs/`; apenas os arquivos otimizados de `public/images/` entram no site.
+Site institucional em Next.js 16, React 19, TypeScript e Tailwind CSS 4. O projeto foi criado com a CLI oficial `create-next-app`, com exportação estática. Os originais de fotografia ficam em `../docs/`; apenas os arquivos otimizados de `public/images/` entram no site.
 
 ## Rodar
 
-Requer Node.js >= 20.9.0. Nesta máquina foi usado Node 24 e npm 11.
+Usa Node.js 24 e npm 11. A versão do Node também é declarada no `package.json` para o build da Vercel.
 
 ```sh
 npm ci
@@ -55,7 +55,11 @@ Telefone confirmado para contato: +55 (47) 3347-4800. Confirmar endereço e pree
 
 ## Publicação na Vercel
 
-Usar `web` como Root Directory caso o repositório inclua a pasta superior. Instalação: `npm ci`; build: `npm run build`; saída estática: `out`. O domínio atual já aponta para a Vercel; o DNS e o e-mail são administrados pela Microsoft. Nenhuma conta, publicação ou configuração DNS foi alterada nesta etapa.
+Repositório: https://github.com/petersonbrand/natubras. O aplicativo está na raiz do repositório: usar a raiz padrão na Vercel. Instalação: `npm ci`; build: `npm run build`; saída estática: `out`. As opções ficam em `vercel.json`. O domínio atual já aponta para a Vercel; o DNS e o e-mail são administrados pela Microsoft.
+
+### Portal de pedidos
+
+`/pedidos` e seus subcaminhos são redirecionados pela Vercel, com HTTP 307, para `http://186.208.217.113:2702/restrita`, preservando o destino do HTML original fornecido em `docs/pedidos/index.html`. A rota Next `/pedidos` também gera um HTML de fallback com redirecionamento e link para o portal, permitindo conferir a exportação estática fora da Vercel. O destino está em `vercel.json` e `src/content/company.ts`; ambos devem ser atualizados juntos se o endereço do portal mudar.
 
 ## Verificação
 

@@ -5,6 +5,7 @@ export const company = {
   legalName: "Natubras Pescados Ltda.",
   cnpj: "72.207.251/0001-52",
   siteUrl: "https://www.natubras.com.br",
+  ordersUrl: "http://186.208.217.113:2702/restrita",
   address: {
     street: "Rua João Emília Duarte, 299",
     district: "Nossa Senhora da Paz",
