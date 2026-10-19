@@ -55,7 +55,7 @@ Telefone confirmado para contato: +55 (47) 3347-4800. Confirmar endereço e pree
 
 ## Publicação na Vercel
 
-Repositório: https://github.com/petersonbrand/natubras. O aplicativo está na raiz do repositório: usar a raiz padrão na Vercel. Instalação: `npm ci`; build: `npm run build`; saída estática: `out`. As opções ficam em `vercel.json`. O domínio atual já aponta para a Vercel; o DNS e o e-mail são administrados pela Microsoft.
+Repositório: https://github.com/petersonbrand/natubras. O aplicativo está na raiz do repositório: usar a raiz padrão na Vercel, com o framework Next.js. Instalação: `npm ci`; build: `npm run build`; Output Directory: `.next`. O adaptador da Vercel lê os manifestos em `.next` e publica a exportação estática gerada em `out`; não configurar `out` como Output Directory nesse adaptador. As opções ficam em `vercel.json`. O domínio atual já aponta para a Vercel; o DNS e o e-mail são administrados pela Microsoft.
 
 ### Portal de pedidos
 
